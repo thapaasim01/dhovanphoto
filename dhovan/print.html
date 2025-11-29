@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Dhovan Photo and Gifts</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+    }
+</script>
+</head>
+<body>
+
+<div class="top-bar">
+    <p><i class="fas fa-phone"></i> Hotline: 054-555555 | <i class="fas fa-envelope"></i> Email: dhovan@photogifts.com</p>
+</div>
+
+<header>
+    <div class="header-main">
+        <div class="date-left" id="nepaliDate"></div>
+        <img src="dhovan.JPG" class="logo" alt="Dhovan Photo and Gifts Logo">
+        <div class="header-title">
+            <h1>Dhovan Photo and Gifts</h1>
+            <p>Capturing Your Moments, Preserving Your Memories.</p>
+        </div>
+        <div class="date-right" id="englishDate"></div>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+    </div>
+    <div class="header-line"></div>
+</header>
+
+<nav>
+    <button class="hamburger-menu" id="hamburgerBtn" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="print.html" class="active"><i class="fas fa-gift"></i> Products</a></li> 
+            <li><a href="services.html"><i class="fas fa-camera"></i> Services</a></li>
+            <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-address-book"></i> Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="services-intro">
+        <h2><i class="fas fa-shopping-bag"></i> Our Personalized Photo Products</h2>
+        <p>
+            Explore our range of custom-printed gifts, perfect for any occasion. Unleash your creativity!
+        </p>
+    </section>
+
+    <div class="content-section" style="padding-top: 0; margin-top: 20px;">
+        <div class="gallery-filter-menu" style="margin-top: 0; margin-bottom: 20px;">
+            <div class="form-group" style="max-width: 600px; margin: 0 auto 15px;">
+                <input type="text" id="productSearch" placeholder="Search for Mugs, T-Shirts, Frames..." aria-label="Search Products">
+            </div>
+            <button class="filter-btn active" data-filter="all">All Products</button>
+            <button class="filter-btn" data-filter="wearable">Wearables</button>
+            <button class="filter-btn" data-filter="decor">Home Decor</button>
+            <button class="filter-btn" data-filter="gadget">Accessories</button>
+        </div>
+    </div>
+    
+    <section class="cards-section card-grid-3-col" id="productList">
+        
+        <div class="card product-card" data-product-type="decor">
+            <img src="path/to/your/mug_image.jpg" alt="Mug Print">
+            <div style="padding: 15px;">
+                <h3><a href="#" style="color: inherit;">Custom Mug Print</a></h3>
+                <p style="font-weight: bold; color: var(--primary-red); margin-bottom: 10px;">Starting from NRs. 500</p>
+                <a href="contact.html?product=mug" class="cta-button small-cta" style="width: 100%;">Order Now <i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+        
+        <div class="card product-card" data-product-type="wearable">
+            <img src="path/to/your/tshirt_image.jpg" alt="T-Shirt Print">
+            <div style="padding: 15px;">
+                <h3><a href="#" style="color: inherit;">Personalized T-Shirts</a></h3>
+                <p style="font-weight: bold; color: var(--primary-red); margin-bottom: 10px;">Starting from NRs. 1200</p>
+                <a href="contact.html?product=tshirt" class="cta-button small-cta" style="width: 100%;">Order Now <i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+        
+        <div class="card product-card" data-product-type="decor">
+            <img src="path/to/your/frame_image.jpg" alt="Photo Frame">
+            <div style="padding: 15px;">
+                <h3><a href="#" style="color: inherit;">Classic Photo Frames</a></h3>
+                <p style="font-weight: bold; color: var(--primary-red); margin-bottom: 10px;">Starting from NRs. 850</p>
+                <a href="contact.html?product=frame" class="cta-button small-cta" style="width: 100%;">Order Now <i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+        
+        <div class="card product-card" data-product-type="gadget">
+            <img src="path/to/your/keyring_image.jpg" alt="Keyring Print">
+            <div style="padding: 15px;">
+                <h3><a href="#" style="color: inherit;">Personalized Keyrings</a></h3>
+                <p style="font-weight: bold; color: var(--primary-red); margin-bottom: 10px;">Starting from NRs. 250</p>
+                <a href="contact.html?product=keyring" class="cta-button small-cta" style="width: 100%;">Order Now <i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+        
+        <div class="card product-card" data-product-type="gadget">
+            <img src="path/to/your/phonecase_image.jpg" alt="Phone Case Print">
+            <div style="padding: 15px;">
+                <h3><a href="#" style="color: inherit;">Custom Phone Cases</a></h3>
+                <p style="font-weight: bold; color: var(--primary-red); margin-bottom: 10px;">Starting from NRs. 999</p>
+                <a href="contact.html?product=phonecase" class="cta-button small-cta" style="width: 100%;">Order Now <i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+        
+        <div class="card product-card" data-product-type="decor">
+            <img src="photos/photo1.jpg" alt="Custom Puzzle">
+            <div style="padding: 15px;">
+                <h3><a href="#" style="color: inherit;">Personalized Photo Puzzle</a></h3>
+                <p style="font-weight: bold; color: var(--primary-red); margin-bottom: 10px;">Starting from NRs. 1500</p>
+                <a href="contact.html?product=puzzle" class="cta-button small-cta" style="width: 100%;">Order Now <i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+
+        <div class="card product-card" data-product-type="gadget">
+            <img src="path/to/your/phonecase_image.jpg" alt="Phone Case Print">
+            <div style="padding: 15px;">
+                <h3><a href="#" style="color: inherit;">Custom Phone Cases</a></h3>
+                <p style="font-weight: bold; color: var(--primary-red); margin-bottom: 10px;">Starting from NRs. 999</p>
+                <a href="contact.html?product=phonecase" class="cta-button small-cta" style="width: 100%;">Order Now <i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+
+        <div class="card product-card" data-product-type="gadget">
+            <img src="path/to/your/phonecase_image.jpg" alt="Phone Case Print">
+            <div style="padding: 15px;">
+                <h3><a href="#" style="color: inherit;">Custom Phone Cases</a></h3>
+                <p style="font-weight: bold; color: var(--primary-red); margin-bottom: 10px;">Starting from NRs. 999</p>
+                <a href="contact.html?product=phonecase" class="cta-button small-cta" style="width: 100%;">Order Now <i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+
+        <div class="card product-card" data-product-type="gadget">
+            <img src="path/to/your/phonecase_image.jpg" alt="Phone Case Print">
+            <div style="padding: 15px;">
+                <h3><a href="#" style="color: inherit;">Custom Phone Cases</a></h3>
+                <p style="font-weight: bold; color: var(--primary-red); margin-bottom: 10px;">Starting from NRs. 999</p>
+                <a href="contact.html?product=phonecase" class="cta-button small-cta" style="width: 100%;">Order Now <i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3><i class="fas fa-address-book"></i> Contact Us</h3>
+            <p>Address: Pokhara, Nepal</p>
+            <p>Phone: 054-555555</p>
+            <p>Email: dhovan@photogifts.com</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-link"></i> Important Links</h3>
+            <ul>
+                <li><a href="services.html"><i class="fas fa-camera"></i> Photo Services</a></li>
+                <li><a href="print.html"><i class="fas fa-gift"></i> Gift Items</a></li>
+                <li><a href="contact.html"><i class="fas fa-tools"></i> Custom Orders</a></li>
+            </ul>
+        </div>
+        <div class="footer-column right-space">
+            <img src="dhovan.JPG" class="footer-logo" alt="Dhovan Photo and Gifts Logo">
+            <p>Capturing Your Moments, Preserving Your Memories.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2024 Dhovan Photo and Gifts | All Rights Reserved
+    </div>
+</footer>
+
+<script defer src="script.js"></script>
+</body>
+</html>

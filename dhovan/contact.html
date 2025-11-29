@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Dhovan Photo and Gifts</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+    }
+</script>
+</head>
+<body>
+
+<header>
+    <div class="header-main">
+        <img src="photos/dhovan.JPG" class="logo" alt="Dhovan Photo and Gifts Logo">
+        <div class="header-title">
+            <h1>Dhovan Photo and Gifts</h1>
+            <p>Capturing Your Moments, Preserving Your Memories</p>
+        </div>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+    </div>
+    <div class="header-line"></div>
+</header>
+
+<nav>
+    <button class="hamburger-menu" id="hamburgerBtn" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i> </button>
+    
+    <div class="nav-links" id="navLinks">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i>About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-camera-retro"></i>Services</a></li>
+            <li><a href="gallery.html"><i class="fas fa-images"></i>Gallery</a></li>
+            <li><a href="contact.html" class="active"><i class="fas fa-phone"></i>Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="content-section page-intro">
+        <h2 class="section-title"><i class="fas fa-phone-alt"></i> Get in Touch</h2>
+        <div class="intro-text">
+            <p>Have a question or want to book a session? Fill out the form below and we will get back to you shortly.</p>
+        </div>
+    </section>
+
+    <section class="content-section contact-page-content">
+        <div class="contact-info-map-grid">
+            <div class="contact-form-column">
+                <h3>Send us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-details-column">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Chhorepatan, 17, Pokhara, Gandaki, Nepal</p>
+                <p><i class="fas fa-phone"></i> Phone: 9802381896 </p>
+                <p><i class="fas fa-envelope"></i> Email: dhovanphoto2@gmail.com </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="https://www.facebook.com/DhovanDigital"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <h3>Find Our Studio</h3>
+            <div class="map-embed">
+                 <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000000.12345!2d-74.0059!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU0JzI0LjAiTiA3NMKwNTYnMDcuMyJF!5e0!3m2!1sen!2sus!4v1600000000000" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                 </iframe>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<button id="scrollToTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3><i class="fas fa-address-book"></i> Contact Info</h3>
+            <p>Address: 123 Photo St, City, State</p>
+            <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> Email: info@dhovanphoto.com</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-link"></i> Quick Links</h3>
+            <ul>
+                <li><a href="services.html"><i class="fas fa-camera-retro"></i> Services</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column right-space">
+            <img src="photos/dhovan.JPG" class="footer-logo" alt="Dhovan Photo Logo">
+            <p>Capturing Your Moments, Preserving Your Memories</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © <time datetime="2025">2025</time> Dhovan Photo and Gifts - All Rights Reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

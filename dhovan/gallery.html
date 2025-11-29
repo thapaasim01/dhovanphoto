@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Dhovan Photo and Gifts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="header-main">
+            <img src="photos/dhovan.JPG" class="logo" alt="Dhovan Photo and Gifts Logo">
+            <div class="header-title">
+                <h1>Dhovan Photo and Gifts</h1>
+                <p>Capturing Your Moments, Preserving Your Memories</p>
+            </div>
+            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+    <nav>
+    <button class="hamburger-menu" id="hamburgerBtn" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i> </button>
+    
+    <div class="nav-links" id="navLinks">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i>About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-camera-retro"></i>Services</a></li>
+            <li><a href="gallery.html" class="active"><i class="fas fa-images"></i>Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-phone"></i>Contact</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <main>
+        <section class="content-section page-intro">
+            <h2 class="section-title"><i class="fas fa-images"></i> Our Work</h2>
+            <div class="intro-text">
+                <p>A selection of our favorite photographs, showcasing the quality and style of our work.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="gallery-filter-menu" id="galleryFilterMenu">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="portrait">Portrait</button>
+                <button class="filter-btn" data-filter="wedding">Wedding</button>
+                <button class="filter-btn" data-filter="event">Event</button>
+                <button class="filter-btn" data-filter="family">Family Photo</button>
+                <button class="filter-btn" data-filter="product">Product</button>
+            </div>
+        </section>
+
+        <section class="content-section gallery-grid-section">
+            <div class="gallery-grid" id="galleryGrid">
+                <a href="photos/photo1.jpg" class="gallery-item" data-category="wedding" style="background-image: url('photos/photo1.jpg');"></a>
+                <a href="photos/photo2.jpg" class="gallery-item" data-category="portrait" style="background-image: url('photos/photo2.jpg');"></a>
+                <a href="photos/photo-3.jpg" class="gallery-item" data-category="family" style="background-image: url('photos/photo-thumb-3.jpg');"></a>
+                <a href="photos/photo-4.jpg" class="gallery-item" data-category="event" style="background-image: url('photos/photo-thumb-4.jpg');"></a>
+                <a href="photos/photo-5.jpg" class="gallery-item" data-category="product" style="background-image: url('photos/photo-thumb-5.jpg');"></a>
+                <a href="photos/photo-6.jpg" class="gallery-item" data-category="portrait" style="background-image: url('photos/photo-thumb-6.jpg');"></a>
+                <a href="photos/photo-7.jpg" class="gallery-item" data-category="wedding" style="background-image: url('photos/photo-thumb-7.jpg');"></a>
+                <a href="photos/photo-8.jpg" class="gallery-item" data-category="family" style="background-image: url('photos/photo-thumb-8.jpg');"></a>
+            </div>
+        </section>
+
+    </main>
+
+    <button id="scrollToTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3><i class="fas fa-address-book"></i> Contact Info</h3>
+                <p>Address: 123 Photo St, City, State</p>
+                <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> Email: info@dhovanphoto.com</p>
+            </div>
+            <div class="footer-column">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul>
+                    <li><a href="services.html"><i class="fas fa-camera-retro"></i> Services</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column right-space">
+                <img src="photos/dhovan.JPG" class="footer-logo" alt="Dhovan Photo Logo">
+                <p>Capturing Your Moments, Preserving Your Memories</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © <time datetime="2025">2025</time> Dhovan Photo and Gifts - All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterMenu = document.getElementById('galleryFilterMenu');
+            const galleryGrid = document.getElementById('galleryGrid');
+
+            if (filterMenu && galleryGrid) {
+                filterMenu.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('filter-btn')) {
+                        // Update active button
+                        filterMenu.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                        e.target.classList.add('active');
+
+                        const filterValue = e.target.getAttribute('data-filter');
+                        
+                        // Filter gallery items
+                        galleryGrid.querySelectorAll('.gallery-item').forEach(item => {
+                            const category = item.getAttribute('data-category');
+                            if (filterValue === 'all' || category === filterValue) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

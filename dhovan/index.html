@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — Dhovan Photo and Gifts</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+    }
+</script>
+</head>
+<body>
+
+<header>
+    <div class="header-main">
+        <img src="photos/dhovan.JPG" class="logo" alt="Dhovan Photo and Gifts Logo">
+        <div class="header-title">
+            <h1>Dhovan Photo and Gifts</h1>
+            <p>Capturing Your Moments, Preserving Your Memories</p>
+        </div>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+    </div>
+    <div class="header-line"></div>
+</header>
+
+<nav>
+    <button class="hamburger-menu" id="hamburgerBtn" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i> </button>
+    
+    <div class="nav-links" id="navLinks">
+        <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i>About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-camera-retro"></i>Services</a></li>
+            <li><a href="gallery.html"><i class="fas fa-images"></i>Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-phone"></i>Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="split-screen-hero">
+        <div class="left-side" style="background-image: url('photos/hero-photo-placeholder.jpg');">
+            </div>
+        <div class="right-side">
+            <h2>Welcome to Dhovan Photo and Gifts</h2>
+            <p>We are a team of passionate photographers dedicated to creating stunning visuals and timeless memories. Whether it's a family portrait or a major event, we are here to tell your story through our lens.</p>
+            <a href="about.html" class="cta-button">Learn More About Us <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="content-section card-grid-2-col">
+        <h2 class="section-title">Our Commitment</h2>
+        <div class="intro-commitment" style="grid-column: 1 / -1;">
+             <p>At Dhovan Photo and Gifts, we believe that every picture tells a story. Our goal is to make every session a comfortable and memorable experience, resulting in photos you'll cherish for a lifetime.</p>
+        </div>
+    </section>
+
+    <section class="content-section card-grid-3-col">
+        <h2 class="section-title">Our Photography Services</h2>
+        
+        <div class="card service-card">
+            <i class="fas fa-portrait fa-3x" style="color: var(--secondary-accent);"></i>
+            <h3>Portraits</h3>
+            <p>Professional headshots, family photos, and individual portraits in our studio or on location.</p>
+        </div>
+
+        <div class="card service-card">
+            <i class="fas fa-calendar-alt fa-3x" style="color: var(--secondary-accent);"></i>
+            <h3>Events</h3>
+            <p>Comprehensive coverage for weddings, birthdays, corporate events, and other special occasions.</p>
+        </div>
+
+        <div class="card service-card">
+            <i class="fas fa-print fa-3x" style="color: var(--secondary-accent);"></i>
+            <h3>Prints & Products</h3>
+            <p>High-quality printing, custom photo albums, and digital copies to showcase your memories.</p>
+        </div>
+    </section>
+    
+    <section class="content-section card-grid-4-col">
+        <h2 class="section-title">Featured Work</h2>
+        <div class="card member-card">
+            <div class="member-image" style="background-image: url('photos/gallery-thumb-1.jpg');"></div>
+            <h3>Wedding</h3>
+        </div>
+        <div class="card member-card">
+            <div class="member-image" style="background-image: url('photos/gallery-thumb-2.jpg');"></div>
+            <h3>Newborn</h3>
+        </div>
+        <div class="card member-card">
+            <div class="member-image" style="background-image: url('photos/gallery-thumb-3.jpg');"></div>
+            <h3>Corporate</h3>
+        </div>
+        <div class="card member-card">
+            <div class="member-image" style="background-image: url('photos/gallery-thumb-4.jpg');"></div>
+            <h3>Family</h3>
+        </div>
+    </section>
+
+</main>
+
+<button id="scrollToTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3><i class="fas fa-address-book"></i> Contact Info</h3>
+            <p>Address: 123 Photo St, City, State</p>
+            <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> Email: info@dhovanphoto.com</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-link"></i> Quick Links</h3>
+            <ul>
+                <li><a href="services.html"><i class="fas fa-camera-retro"></i> Services</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column right-space">
+            <img src="photos/dhovan.JPG" class="footer-logo" alt="Dhovan Photo Logo">
+            <p>Capturing Your Moments, Preserving Your Memories</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © <time datetime="2025">2025</time> Dhovan Photo and Gifts - All Rights Reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
